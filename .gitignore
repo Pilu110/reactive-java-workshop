@@ -1,3 +1,7 @@
+# Ignore idea files
+.idea/
+.idea/*
+
 # Default ignored files
 /shelf/
 .DS_Store
