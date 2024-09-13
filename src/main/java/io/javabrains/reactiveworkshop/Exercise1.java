@@ -32,6 +32,9 @@ public class Exercise1 {
                 id -> StreamSources.userStream().filter(user -> user.getId() == id)
         ).map(User::getFirstName).forEach(t -> System.out.printf("%s, ", t));
 
+        System.out.println();
+        StreamSources.userStream().filter(u -> StreamSources.intNumbersStream().anyMatch(i -> i == u.getId()))
+                .forEach(u -> System.out.println(u));
     }
 
 }
